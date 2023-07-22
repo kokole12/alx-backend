@@ -44,7 +44,7 @@ class Server:
         """data from the csv file"""
         val = self.dataset()
         try:
-            begin, end =  index_range(page, page_size)
+            begin, end = index_range(page, page_size)
             return val[begin:end]
         except TypeError:
             return []
