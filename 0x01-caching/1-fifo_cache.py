@@ -9,18 +9,25 @@ class FIFOCache(BaseCaching):
         super().__init__()
 
     def put(self, key, item):
-        """addding to fifo queue"""
+        """addding to fifo queue
+        _summary_
+        Args:
+                key (_type_): _description_
+                item (_type_): _description_
+        """
         if key is None or item is None:
             pass
         if len(self.cache_data) >= BaseCaching.MAX_ITEMS\
-            and key not in self.cache_data.keys():
+                and key not in self.cache_data.keys():
             key_first = next(iter(self.cache_data.keys()))
             del self.cache_data[key_first]
             print("DISCARD: {}".format(key_first))
         self.cache_data[key] = item
 
     def get(self, key):
-        """getting item by key"""
+        """return the value in self.cache_data linked to key
+        Args:
+        key (_type_): _description_"""
         if key is None or key not in self.cache_data.keys():
             return None
         return self.cache_data.get(key)
