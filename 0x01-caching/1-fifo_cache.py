@@ -12,7 +12,8 @@ class FIFOCache(BaseCaching):
         """addding to fifo queue"""
         if key is None or item is None:
             pass
-        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS\
+            and key not in self.cache_data.keys():
             key_first = next(iter(self.cache_data.keys()))
             del self.cache_data[key_first]
             print("DISCARD: {}".format(key_first))
