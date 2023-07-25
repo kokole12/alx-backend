@@ -5,7 +5,9 @@ from base_caching import BaseCaching
 
 class BasicCache(BaseCaching):
     """initializing from super class"""
+
     def __init__(self):
+        """inheritected values"""
         super().__init__()
 
     def put(self, key, item):
