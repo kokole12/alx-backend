@@ -18,5 +18,4 @@ class BasicCache(BaseCaching):
         """getting the value by key"""
         if key is None or key not in self.cache_data.keys():
             return None
-        """returning value of cache data"""
         return self.cache_data.get(key)
