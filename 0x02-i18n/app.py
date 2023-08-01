@@ -8,7 +8,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 async def hello_world() -> str:
     """_summary_
     """
