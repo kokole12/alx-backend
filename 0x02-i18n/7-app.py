@@ -8,6 +8,8 @@
 from flask import Flask, request, g
 from flask import render_template
 from flask_babel import Babel
+from pytz import timezone
+import pytz.exceptions
 
 
 class Config(object):
@@ -65,10 +67,28 @@ def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
+@babel.timezoneselector
+def get_timezone():
+    tzone = request.args.get('timezone', None)
+    if tzone:
+        try:
+            return timezone(tzone).zone
+        except pytz.exceptions.UnknownTimeZoneError:
+            pass
+    if g.user:
+        try:
+            tzone = g.user.get('timezone')
+            return timezone(tzone).zone
+        except pytz.exceptions.UnknownTimeZoneError:
+            pass
+    default = app.config['BABEL_DEFAULT_TIMEZONE']
+    return default
+
+
 @app.route('/', strict_slashes=False)
 def index() -> str:
     """rending the template"""
-    return render_template('6-index.html')
+    return render_template('7-index.html')
 
 
 if __name__ == '__main__':
