@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
-#
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-01 18:31+0300\n"
+"POT-Creation-Date: 2023-08-01 19:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Generated-By: Babel 2.12.1\n"
 
 #: templates/3-index.html:6
-msgid "Welcome to Holberton"
+msgid "home_title"
 msgstr ""
 
 #: templates/3-index.html:9
-msgid "Hello world"
+msgid "home_header"
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/click/_termui_impl.py:518
@@ -284,3 +284,4 @@ msgid "{len_type} values are required, but {len_value} was given."
 msgid_plural "{len_type} values are required, but {len_value} were given."
 msgstr[0] ""
 msgstr[1] ""
+
