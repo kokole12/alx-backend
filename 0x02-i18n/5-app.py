@@ -40,7 +40,9 @@ def get_user():
 
 @app.before_request
 def before_request() -> None:
-    """_summary_
+    """
+        method to run before the get user is invoked to
+        check if there is a loggedin user
     """
     user = get_user()
     g.user = user
