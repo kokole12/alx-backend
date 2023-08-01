@@ -12,7 +12,7 @@ app = Flask(__name__)
 async def hello_world() -> str:
     """_summary_
     """
-    return render_template('0-index.html')
+    return await render_template('0-index.html')
 
 
 if __name__ == '__main__':
