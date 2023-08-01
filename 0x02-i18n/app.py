@@ -10,6 +10,8 @@ app = Flask(__name__)
 
 
 """route to the index page"""
+
+
 @app.route('/', strict_slashes=False)
 def index() -> str:
     """rendering the template"""
