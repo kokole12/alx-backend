@@ -18,10 +18,9 @@ function publishMessage(message, time) {
                 console.log(error);
             }
             console.log(`About to send ${message}`);
-
-            publisher.quit();
         })
     }, time);
+
 }
 
 publishMessage("Holberton Student #1 starts course", 100);
