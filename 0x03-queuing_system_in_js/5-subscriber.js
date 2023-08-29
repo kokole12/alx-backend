@@ -1,9 +1,6 @@
 import { createClient } from "redis";
 
-const subscriber = createClient({
-    host: '127.0.0.1',
-    port: 6379
-});
+const subscriber = createClient();
 
 subscriber
 .on('connect', () => {

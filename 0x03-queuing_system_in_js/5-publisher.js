@@ -1,9 +1,6 @@
 import { createClient } from "redis";
 
-const publisher = createClient({
-    host: '127.0.0.1',
-    port: 6379
-});
+const publisher = createClient();
 
 publisher
   .on("connect", () => {
